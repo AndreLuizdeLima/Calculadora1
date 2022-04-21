@@ -1,0 +1,95 @@
+<!DOCTYPE html> <!--Andre Luiz 3ia nº2-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+      <Script>
+        function soma(){
+          document.getElementById("calc1");
+          var num1 = calc1.n1.value
+          var num2 = calc1.n2.value
+          var soma = parseInt(num1) + parseInt(num2)
+          calc1.Resultado.value = soma
+        }
+
+        function subitrair(){
+          document.getElementById("calc1");
+          var num1 = calc1.n1.value
+          var num2 = calc1.n2.value
+          var soma = parseInt(num1) - parseInt(num2)
+          calc1.Resultado.value = soma
+        }
+
+        function multiplicar(){
+          document.getElementById("calc1");
+          var num1 = calc1.n1.value
+          var num2 = calc1.n2.value
+          var soma = parseInt(num1) * parseInt(num2)
+          calc1.Resultado.value = soma
+        }
+
+        function dividir(){
+          document.getElementById("calc1");
+          var num1 = calc1.n1.value
+          var num2 = calc1.n2.value
+          var soma = parseInt(num1) / parseInt(num2)
+          calc1.Resultado.value = soma
+        }
+
+        function r2(){
+          document.getElementById("calc2");
+          var raiz = calc2.n3.value;
+          raiz = (Math.sqrt(raiz));
+          var resultado = raiz;
+          calc2.Resultado2.value = resultado;
+        }
+
+        function r3() {
+          document.getElementById("calc2");
+          var raiz = calc2.n3.value;
+          raiz = (Math.cbrt(raiz));
+          var resultado = raiz;
+          calc2.Resultado2.value = resultado;
+        }
+
+        function potencia(){
+          document.getElementById("calc3")
+          var base = calc3.n4.value
+          var expo = calc3.n5.value
+          var resultado3 = (Math.pow(base,expo))
+          calc3.Resultado3.value = resultado3
+        }
+      </Script>
+</head>
+<body>
+
+    <h3>Calculadora basica</h3>
+      <form id="calc1">
+      Valor 1: <input type="text" name="n1"> <br><br>
+      Valor 2: <input type="text" name="n2"> <br><br>
+      Resultado: <input type="text" name="Resultado"> <br><br>
+      <input type="button" value="Somar" onclick="soma()">
+      <input type="button" value="Subitrair" onclick="subitrair()">
+      <input type="button" value="Multiplicar" onclick="multiplicar()">
+      <input type="button" value="Dividir" onclick="dividir()">
+      </form>
+
+    <h3>Calcular Raiz</h3>
+      <form id="calc2">
+        Valor 1: <input type="text" name="n3"><br><br>
+        Resultado: <input type="text" name="Resultado2"><br><br>
+        <input type="button" value="Raiz quadrada" onclick="r2()">
+        <input type="button" value="Raiz cubica" onclick="r3()">
+      </form>
+  
+  <h3>Calculadora de Potencia</h3>
+    <form id="calc3">
+      Base: <input type="text" name="n4"><br><br>
+      Expoente: <input type="text" name="n5"><br><br>
+      Resultado: <input type="text" name="Resultado3"><br><br>
+      <input type="button" value="Calcular" onclick="potencia()">
+    </form>
+</body>
+</html> 
